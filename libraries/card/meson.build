@@ -2,10 +2,10 @@ subdir('src')
 
 libcard_includes = include_directories('include')
 
-mwrap_libcard = get_option('mwrap_libcard')
+mwrap_patch3 = get_option('mwrap_patch3')
 libcard_c_args = []
-if mwrap_libcard != 'default'
-    libcard_c_args += ['-wrap:sdk', mwrap_libcard]
+if mwrap_patch3 != 'default'
+    libcard_c_args += ['-wrap:sdk', mwrap_patch3]
     libcard_c_args += ['-USP1P3_BUG_FOR_CONDITIONAL_ASM_INSTRUCTIONS']
 endif
 

@@ -1,10 +1,10 @@
 subdir('src')
 
 
-mwrap_libos = get_option('mwrap_libos')
+mwrap_patch3 = get_option('mwrap_patch3')
 libos_c_args = []
-if mwrap_libos != 'default'
-    libos_c_args += ['-wrap:sdk', mwrap_libos]
+if mwrap_patch3 != 'default'
+    libos_c_args += ['-wrap:sdk', mwrap_patch3]
     libos_c_args += ['-USP1P3_BUG_FOR_CONDITIONAL_ASM_INSTRUCTIONS']
 endif
 
